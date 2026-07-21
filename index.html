@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>LaBelle — Condição Exclusiva Lift Glow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   LABELLE — LANDING PAGE CAPTURA
+   Mobile-first · Premium · Feminino · Elegante
+   ============================================ */
+:root {
+  --black:        #0A0A09;
+  --black-card:   #111009;
+  --black-soft:   #1A1208;
+  --gold:         #C9A227;
+  --gold-light:   #E8C766;
+  --gold-dim:     rgba(201,162,39,0.18);
+  --gold-border:  rgba(201,162,39,0.3);
+  --cream:        #F5F1E8;
+  --cream-dim:    #B9B0A0;
+  --cream-muted:  rgba(245,241,232,0.55);
+  --error:        #E07070;
+  --success:      #6BBF8E;
+  --serif:        'Cormorant Garamond', Georgia, serif;
+  --sans:         'Inter', -apple-system, sans-serif;
+  --radius:       16px;
+  --radius-sm:    10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: var(--sans);
+  line-height: 1.6;
+  min-height: 100svh;
+  overflow-x: hidden;
+}
+
+/* ---- BACKGROUND DECORATIVO ---- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,162,39,0.12), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(201,162,39,0.06), transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---- LAYOUT ---- */
+.page {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px 48px;
+}
+
+/* ---- HEADER ---- */
+.header {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 32px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+}
+
+.logo-sub {
+  font-size: 9px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  font-weight: 400;
+}
+
+.logo-line {
+  width: 40px;
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin-top: 2px;
+}
+
+/* ---- CARD PRINCIPAL ---- */
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--black-card);
+  border: 0.5px solid var(--gold-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow:
+    0 0 0 0.5px rgba(201,162,39,0.1),
+    0 32px 64px rgba(0,0,0,0.5),
+    0 0 80px rgba(201,162,39,0.05);
+}
+
+/* ---- BADGE DE VAGAS ---- */
+.slots-badge {
+  background: linear-gradient(135deg, rgba(201,162,39,0.15), rgba(201,162,39,0.06));
+  border-bottom: 0.5px solid var(--gold-border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slots-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: pulse-dot 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.slots-text {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+.slots-count {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* ---- HERO DO CARD ---- */
+.card-hero {
+  padding: 36px 28px 28px;
+  text-align: center;
+  border-bottom: 0.5px solid rgba(201,162,39,0.1);
+}
+
+.badge-exclusivo {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 18px;
+  padding: 6px 16px;
+  border: 0.5px solid var(--gold-border);
+  border-radius: 100px;
+  background: var(--gold-dim);
+}
+
+.card-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(30px, 7vw, 38px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+
+.card-hero h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: var(--cream-dim);
+  line-height: 1.65;
+  margin-top: 14px;
+  max-width: 36ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- PREÇO ---- */
+.price-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 18px 24px;
+  background: rgba(201,162,39,0.06);
+  border-radius: var(--radius-sm);
+  border: 0.5px solid rgba(201,162,39,0.15);
+}
+
+.price-original {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--cream-dim);
+  text-decoration: line-through;
+  text-decoration-color: rgba(185,176,160,0.5);
+}
+
+.price-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--gold-border);
+}
+
+.price-promo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.price-promo-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.price-promo {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.price-discount-badge {
+  background: var(--gold);
+  color: var(--black);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.05em;
+  align-self: center;
+}
+
+/* ---- PROCEDIMENTO DESTAQUE ---- */
+.procedure-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.procedure-tag span {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  font-weight: 400;
+}
+
+.procedure-tag strong {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-style: italic;
+  color: var(--cream);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.procedure-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+/* ---- FORMULÁRIO ---- */
+.card-form {
+  padding: 28px 28px 32px;
+}
+
+.form-title {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--cream-dim);
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+
+.field {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.field label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.field input {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,162,39,0.2);
+  border-radius: var(--radius-sm);
+  padding: 15px 16px;
+  font-size: 15px;
+  font-family: var(--sans);
+  color: var(--cream);
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+}
+
+.field input::placeholder {
+  color: rgba(185,176,160,0.4);
+  font-size: 14px;
+}
+
+.field input:focus {
+  border-color: var(--gold);
+  background: rgba(201,162,39,0.05);
+  box-shadow: 0 0 0 3px rgba(201,162,39,0.1);
+}
+
+.field input.error {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(224,112,112,0.1);
+}
+
+.field-error {
+  font-size: 12px;
+  color: var(--error);
+  margin-top: 6px;
+  display: none;
+  align-items: center;
+  gap: 5px;
+}
+.field-error.show { display: flex; }
+
+/* ---- BOTÃO PRINCIPAL ---- */
+.btn-primary {
+  width: 100%;
+  background: linear-gradient(135deg, var(--gold) 0%, #B8911F 100%);
+  color: var(--black);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 18px 24px;
+  font-size: 13px;
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 8px;
+  touch-action: manipulation;
+  min-height: 56px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  box-shadow: 0 4px 24px rgba(201,162,39,0.35);
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent);
+  pointer-events: none;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 32px rgba(201,162,39,0.45);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary .btn-text { display: block; }
+.btn-primary .btn-loading { display: none; align-items: center; justify-content: center; gap: 8px; }
+.btn-primary.loading .btn-text { display: none; }
+.btn-primary.loading .btn-loading { display: flex; }
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(10,10,9,0.3);
+  border-top-color: var(--black);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---- FOOTER DO FORM ---- */
+.form-footer {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.form-consent {
+  font-size: 11px;
+  color: var(--cream-muted);
+  line-height: 1.6;
+}
+
+.form-validity {
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: rgba(201,162,39,0.06);
+  border-radius: 8px;
+  border: 0.5px solid rgba(201,162,39,0.15);
+  font-size: 11px;
+  color: var(--cream-dim);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.form-validity strong {
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+/* ---- ESTADO DE SUCESSO ---- */
+.success-screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 48px 28px;
+}
+
+.success-screen.show { display: flex; }
+
+.success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(107,191,142,0.12);
+  border: 1px solid rgba(107,191,142,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  animation: pop-in 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+
+@keyframes pop-in {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.success-check {
+  color: var(--success);
+}
+
+.success-h2 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.success-p {
+  font-size: 14px;
+  color: var(--cream-dim);
+  line-height: 1.7;
+  max-width: 30ch;
+  margin: 0 auto 32px;
+}
+
+.btn-whats {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #05210F;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  touch-action: manipulation;
+  min-height: 52px;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-whats:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 28px rgba(37,211,102,0.35);
+}
+
+.success-divider {
+  width: 40px;
+  height: 0.5px;
+  background: var(--gold-border);
+  margin: 28px auto;
+}
+
+.success-note {
+  font-size: 11px;
+  color: var(--cream-muted);
+  line-height: 1.6;
+}
+
+/* ---- FOOTER DA PÁGINA ---- */
+.page-footer {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.page-footer-text {
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(185,176,160,0.4);
+}
+
+/* ---- LINHA DOURADA DECORATIVA ---- */
+.gold-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--gold-border), transparent);
+  margin: 0 auto 28px;
+}
+
+/* ---- ALERTAS GLOBAIS ---- */
+.alert {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  margin-bottom: 16px;
+  display: none;
+}
+.alert.show { display: block; }
+.alert-error {
+  background: rgba(224,112,112,0.1);
+  border: 0.5px solid rgba(224,112,112,0.3);
+  color: #F0A0A0;
+}
+
+/* ---- RESPONSIVO ---- */
+@media (min-width: 480px) {
+  .card-hero { padding: 44px 36px 32px; }
+  .card-form { padding: 32px 36px 40px; }
+  .success-screen { padding: 56px 36px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="logo" aria-label="LaBelle Estética">
+      <span class="logo-text">LaBelle</span>
+      <div class="logo-line" aria-hidden="true"></div>
+      <span class="logo-sub">Estética &amp; Bem-estar</span>
+    </div>
+  </header>
+
+  <!-- CARD PRINCIPAL -->
+  <main id="main-content" class="card" aria-label="Oferta exclusiva Lift Glow">
+
+    <!-- BADGE DE VAGAS -->
+    <div class="slots-badge" role="status" aria-live="polite" aria-label="Vagas disponíveis">
+      <div class="slots-dot" aria-hidden="true"></div>
+      <span class="slots-text">Apenas</span>
+      <span class="slots-count" id="slots-remaining">15</span>
+      <span class="slots-text">vagas disponíveis</span>
+    </div>
+
+    <!-- HERO -->
+    <div class="card-hero">
+      <div class="badge-exclusivo" aria-label="Oferta exclusiva">✦ Condição exclusiva</div>
+
+      <h1>Parabéns! Você ganhou<br><em>20% de desconto</em></h1>
+
+      <p class="card-subtitle">
+        Preencha seus dados para garantir uma das
+        <strong style="color:var(--cream)">15 vagas disponíveis</strong>
+        e nossa equipe entrará em contato para realizar seu agendamento.
+      </p>
+
+      <!-- PREÇO -->
+      <div class="price-block" role="group" aria-label="Preço do procedimento">
+        <div class="price-original" aria-label="De R$ 250,00">
+          <span aria-hidden="true">De</span> R$ 250
+        </div>
+        <div class="price-divider" aria-hidden="true"></div>
+        <div class="price-promo-wrap">
+          <span class="price-promo-label">por apenas</span>
+          <span class="price-promo" aria-label="Por R$ 199,00">R$ 199</span>
+        </div>
+        <div class="price-discount-badge" aria-label="20% de desconto">-20%</div>
+      </div>
+
+      <!-- PROCEDIMENTO -->
+      <div class="procedure-tag" aria-label="Procedimento: Lift Glow">
+        <span>Procedimento</span>
+        <div class="procedure-dot" aria-hidden="true"></div>
+        <strong>Lift Glow</strong>
+      </div>
+    </div>
+
+    <!-- FORMULÁRIO -->
+    <div class="card-form" id="form-container">
+
+      <p class="form-title">Preencha seus dados para garantir o benefício</p>
+
+      <div class="alert alert-error" id="global-error" role="alert"></div>
+
+      <form id="lead-form" novalidate autocomplete="on">
+
+        <!-- Nome -->
+        <div class="field">
+          <label for="field-name">Nome completo</label>
+          <input
+            type="text"
+            id="field-name"
+            name="name"
+            placeholder="Seu nome completo"
+            autocomplete="name"
+            inputmode="text"
+            required
+            aria-required="true"
+            aria-describedby="error-name"
+          >
+          <div class="field-error" id="error-name" role="alert">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5.5" stroke="currentColor"/><path d="M6 3.5v3M6 8h.01" stroke="currentColor" stroke-linecap="round"/></svg>
+            Por favor, informe seu nome completo.
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="field">
+          <label for="field-whatsapp">WhatsApp</label>
+          <input
+            type="tel"
+            id="field-whatsapp"
+            name="whatsapp"
+            placeholder="(00) 00000-0000"
+            autocomplete="tel"
+            inputmode="numeric"
+            required
+            aria-required="true"
+            aria-describedby="error-whatsapp"
+            maxlength="15"
+          >
+          <div class="field-error" id="error-whatsapp" role="alert">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5.5" stroke="currentColor"/><path d="M6 3.5v3M6 8h.01" stroke="currentColor" stroke-linecap="round"/></svg>
+            Informe um WhatsApp válido com DDD.
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          <label for="field-email">E-mail</label>
+          <input
+            type="email"
+            id="field-email"
+            name="email"
+            placeholder="seu@email.com"
+            autocomplete="email"
+            inputmode="email"
+            required
+            aria-required="true"
+            aria-describedby="error-email"
+          >
+          <div class="field-error" id="error-email" role="alert">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="5.5" stroke="currentColor"/><path d="M6 3.5v3M6 8h.01" stroke="currentColor" stroke-linecap="round"/></svg>
+            Informe um e-mail válido.
+          </div>
+        </div>
+
+        <!-- BOTÃO -->
+        <button type="submit" class="btn-primary" id="submit-btn" aria-label="Garantir meu desconto de 20% no Lift Glow">
+          <span class="btn-text">QUERO GARANTIR MEU DESCONTO</span>
+          <span class="btn-loading" aria-hidden="true">
+            <span class="spinner"></span>
+            Enviando...
+          </span>
+        </button>
+
+        <!-- FOOTER DO FORM -->
+        <div class="form-footer">
+          <p class="form-consent">
+            Ao enviar seus dados, você autoriza o contato da LaBelle sobre este benefício.
+          </p>
+          <div class="form-validity" id="validity-notice" role="note">
+            <strong>Importante:</strong> Condição válida para procedimentos agendados e realizados até
+            <strong id="validity-date">o último dia deste mês</strong>,
+            mediante disponibilidade de horários. O desconto não é cumulativo com outras promoções.
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- TELA DE SUCESSO -->
+    <div class="success-screen" id="success-screen" aria-live="polite" aria-label="Cadastro realizado com sucesso">
+      <div class="success-icon" aria-hidden="true">
+        <svg class="success-check" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M6 16l7 7 13-13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <h2 class="success-h2">Seu desconto foi<br><em style="font-style:italic; color:var(--gold-light)">garantido!</em></h2>
+
+      <p class="success-p">
+        Recebemos seus dados. Nossa equipe entrará em contato pelo WhatsApp para realizar seu agendamento.
+      </p>
+
+      <a
+        href="#"
+        id="whats-link"
+        class="btn-whats"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar com a LaBelle pelo WhatsApp"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.1h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.55-3.7 8.25-8.25 8.25zm4.52-6.18c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.55c.12.17 1.74 2.65 4.21 3.72.59.25 1.05.4 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.48-.28z"/>
+        </svg>
+        FALAR COM A LABELLE
+      </a>
+
+      <div class="success-divider" aria-hidden="true"></div>
+      <p class="success-note">
+        Fique atenta ao seu WhatsApp.<br>
+        Nossa equipe entrará em contato em breve.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="page-footer" role="contentinfo">
+    <div class="gold-line" aria-hidden="true"></div>
+    <p class="page-footer-text">LaBelle · Estética &amp; Bem-estar</p>
+  </footer>
+
+</div>
+
+<script>
+/* ============================================
+   LABELLE — LÓGICA DA LANDING PAGE
+   ============================================ */
+
+// ---- CONFIGURAÇÃO ----
+const SUPABASE_URL = 'https://nfcsgjbnoesokxmqtcyw.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5mY3NnamJub2Vzb2t4bXF0Y3l3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQwNzYxNDEsImV4cCI6MjA5OTY1MjE0MX0.9hmnNtQma-VPOVPFa7KHsTHCw7YUwqFbiXFThPkJNSs';
+const WHATSAPP_NUMBER = '5561982371857'; // número da LaBelle — ALTERAR
+
+// ---- LEITURA DA URL ----
+const params = new URLSearchParams(window.location.search);
+const influencer = params.get('influencer') || params.get('inf') || 'direto';
+const utmSource   = params.get('utm_source')   || '';
+const utmMedium   = params.get('utm_medium')   || '';
+const utmCampaign = params.get('utm_campaign') || '';
+const utmContent  = params.get('utm_content')  || '';
+const utmTerm     = params.get('utm_term')     || '';
+const campaign    = params.get('campaign')     || 'lift-glow-jul26';
+
+// ---- DATA DE VALIDADE DINÂMICA ----
+(function setValidityDate() {
+  const now = new Date();
+  const lastDay = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+  const day = lastDay.getDate();
+  const months = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  const month = months[lastDay.getMonth()];
+  const year = lastDay.getFullYear();
+  const el = document.getElementById('validity-date');
+  if (el) el.textContent = `${day} de ${month} de ${year}`;
+})();
+
+// ---- LINK DO WHATSAPP PÓS-SUCESSO ----
+const waMsg = encodeURIComponent('Olá! Acabei de garantir meu desconto de 20% no Lift Glow e gostaria de agendar meu procedimento.');
+document.getElementById('whats-link').href = `https://wa.me/${WHATSAPP_NUMBER}?text=${waMsg}`;
+
+// ---- MÁSCARA DE WHATSAPP ----
+const whatsInput = document.getElementById('field-whatsapp');
+whatsInput.addEventListener('input', function(e) {
+  let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+  if (v.length > 10) {
+    v = v.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+  } else if (v.length > 6) {
+    v = v.replace(/^(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+  } else if (v.length > 2) {
+    v = v.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+  } else if (v.length > 0) {
+    v = v.replace(/^(\d*)/, '($1');
+  }
+  e.target.value = v;
+});
+
+// ---- VALIDAÇÃO ----
+function validateForm() {
+  let valid = true;
+
+  const name = document.getElementById('field-name');
+  const whats = document.getElementById('field-whatsapp');
+  const email = document.getElementById('field-email');
+
+  // Nome
+  const nameErr = document.getElementById('error-name');
+  if (!name.value.trim() || name.value.trim().split(' ').length < 2) {
+    name.classList.add('error');
+    nameErr.classList.add('show');
+    valid = false;
+  } else {
+    name.classList.remove('error');
+    nameErr.classList.remove('show');
+  }
+
+  // WhatsApp
+  const whatsErr = document.getElementById('error-whatsapp');
+  const whatsDigits = whats.value.replace(/\D/g, '');
+  if (whatsDigits.length < 10 || whatsDigits.length > 11) {
+    whats.classList.add('error');
+    whatsErr.classList.add('show');
+    valid = false;
+  } else {
+    whats.classList.remove('error');
+    whatsErr.classList.remove('show');
+  }
+
+  // Email
+  const emailErr = document.getElementById('error-email');
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email.value.trim())) {
+    email.classList.add('error');
+    emailErr.classList.add('show');
+    valid = false;
+  } else {
+    email.classList.remove('error');
+    emailErr.classList.remove('show');
+  }
+
+  return valid;
+}
+
+// Remove erros ao digitar
+['field-name','field-whatsapp','field-email'].forEach(id => {
+  const el = document.getElementById(id);
+  el.addEventListener('input', () => {
+    el.classList.remove('error');
+    const errId = 'error-' + id.replace('field-', '');
+    document.getElementById(errId)?.classList.remove('show');
+    document.getElementById('global-error')?.classList.remove('show');
+  });
+});
+
+// ---- ENVIO DO FORMULÁRIO ----
+let submitting = false;
+let lastSubmitKey = '';
+
+document.getElementById('lead-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  if (submitting) return;
+  if (!validateForm()) return;
+
+  const name    = document.getElementById('field-name').value.trim();
+  const whats   = document.getElementById('field-whatsapp').value.trim();
+  const email   = document.getElementById('field-email').value.trim().toLowerCase();
+
+  // Previne duplicata em sequência (mesmo email/whats em 30s)
+  const submitKey = email + whats;
+  if (submitKey === lastSubmitKey) return;
+
+  const btn = document.getElementById('submit-btn');
+  const globalError = document.getElementById('global-error');
+
+  submitting = true;
+  btn.disabled = true;
+  btn.classList.add('loading');
+  globalError.classList.remove('show');
+
+  const payload = {
+    name,
+    whatsapp: whats,
+    email,
+    influencer_slug: influencer,
+    procedure: 'Lift Glow',
+    utm_source:   utmSource,
+    utm_medium:   utmMedium,
+    utm_campaign: utmCampaign,
+    utm_content:  utmContent,
+    utm_term:     utmTerm,
+    status: 'novo'
+  };
+
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/labelle_leads`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.message || `Erro ${res.status}`);
+    }
+
+    // Sucesso
+    lastSubmitKey = submitKey;
+    showSuccess();
+
+  } catch (err) {
+    console.error('Erro ao salvar lead:', err);
+    globalError.textContent = 'Não foi possível enviar. Verifique sua conexão e tente novamente.';
+    globalError.classList.add('show');
+    btn.disabled = false;
+    btn.classList.remove('loading');
+    submitting = false;
+  }
+});
+
+function showSuccess() {
+  document.getElementById('form-container').style.display = 'none';
+  const success = document.getElementById('success-screen');
+  success.classList.add('show');
+  success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Atualiza contador de vagas (simulado — em produção virá do banco)
+  const slot = document.getElementById('slots-remaining');
+  if (slot) {
+    const cur = parseInt(slot.textContent, 10);
+    if (cur > 1) slot.textContent = cur - 1;
+  }
+}
+</script>
+</body>
+</html>
